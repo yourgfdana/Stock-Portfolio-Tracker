@@ -31,4 +31,4 @@ python -m pip install pandas matplotlib yfinance pytest jupyter
 
 After installing the packages, restart Jupyter Notebook before running the main notebook to ensure all modules are properly loaded.
 
-For for the tests, make a folder to contian the test files. Team could not figure out how to add a folder to Github. 
+For for the tests, make a folder to contian the test files.
