@@ -51,8 +51,3 @@ class Stock:
     def __str__(self):
         """Return readable string."""
         return f"{self.ticker}: ${self.current_price:.2f}"
-
-
-if __name__ == "__main__":
-
-    #pytest in other file
