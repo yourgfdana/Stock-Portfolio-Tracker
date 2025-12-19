@@ -47,6 +47,3 @@ class Portfolio:
  
     def __str__(self):
         return f"Portfolio: {len(self.stocks)} stocks, ${self.total_value:.2f}"
-
-
-if __name__ == "__main__":
