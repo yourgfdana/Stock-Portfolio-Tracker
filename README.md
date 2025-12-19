@@ -6,6 +6,6 @@ Today’s financial markets have slowly become volatile, allowing individual inv
 This project aims to design a Python-based stock portfolio tracker and prediction system that allows users to:
 Monitor real-time and historical portfolio performance, analyze individual stock metrics such as returns, volatility, and correlations, predict short-term stock trends using machine learning models.
 
-Outcomes
+Outcomes:
 Provide the user with an easily readable stock prediction service to tell how their stocks will change over time. As well as a way to visualize their portfolios without needing to do it themselves, simple predictive analytics to improve their overall decision-making in stocks, reusable service so that it can be used by multiple clients’ data. 
 
