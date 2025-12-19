@@ -9,3 +9,8 @@ Monitor real-time and historical portfolio performance, analyze individual stock
 Outcomes:
 Provide the user with an easily readable stock prediction service to tell how their stocks will change over time. As well as a way to visualize their portfolios without needing to do it themselves, simple predictive analytics to improve their overall decision-making in stocks, reusable service so that it can be used by multiple clients’ data. 
 
+
+
+Group: Leighana Ruiz (lruiz2@stevens.edu), Johnny Cantos (jcantos@stevens.edu), and Melissa Rich (mrich@stevens.edu).
+
+Structure: Program contains tools to help user develop a stock portfolio (portfolio.py) and watch the stock market to inform decisions (stock.py). 
