@@ -1,4 +1,3 @@
-
 import matplotlib.pyplot as plt
 from stock import Stock
 
