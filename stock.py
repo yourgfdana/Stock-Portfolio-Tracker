@@ -2,6 +2,9 @@ import pandas as pd
 import yfinance as yf
 
 class Stock:
+    """
+    Handles stock data, grabs the price history and calculates some basic metrics
+    """
     
     def __init__(self, ticker):
         self.ticker = ticker.upper()
@@ -12,6 +15,9 @@ class Stock:
         self.fetch()
     
     def fetch(self):
+        """
+        pull down historical prices from Yahoo Finance 
+        """
         try:
             data = yf.download(self.ticker, period="1y", progress=False)
             if data.empty:
@@ -24,20 +30,29 @@ class Stock:
             raise ValueError(f"Error fetching {self.ticker}: {e}")
     
     def compute_metrics(self):
-        # Daily returns
+        """
+        Calculate volatility and moving averages from price data
+        """
         returns = self.past_prices.pct_change().dropna()
         
-        # Volatility (annualized)
-        self.volatility = float(returns.std() * (252 ** 0.5))
-        
-        # Moving averages
+        if len(returns) > 1:
+        """
+        Annualize the daily volatility
+        """
+            self.volatility = float(returns.std(ddof=1) * (252 ** 0.5))
+        else:
+            self.volatility = 0.0
+       
+        # Calculate 20-day and 50-day moving averages
         self.moving_averages = {
-            'MA_20': float(self.past_prices.tail(20).mean()),
-            'MA_50': float(self.past_prices.tail(50).mean())
+            "MA_20": float(self.past_prices.tail(20).mean()),
+            "MA_50": float(self.past_prices.tail(50).mean()),
         }
     
     def predict_change(self):
-   
+       """
+       trend prediction
+       """
         ma20 = self.moving_averages.get('MA_20', 0)
         ma50 = self.moving_averages.get('MA_50', 0)
         
